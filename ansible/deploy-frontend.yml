@@ -1,0 +1,35 @@
+- name: Deploy Frontend to Target
+  hosts: gym
+  become: yes
+
+  tasks:
+
+
+    - name: Create app diectory
+      file:
+        path: /home/ubuntu/frontend
+        state: directory
+        owner: ubuntu
+        group: ubuntu
+        mode: '0755'
+
+    - name: Copy frontend files
+      copy:
+        src: ../app/frontend/
+        dest: /home/ubuntu/frontend/
+        owner: ubuntu
+        group: ubuntu
+        mode: '0755'
+
+    - name: build frontend image
+      command: docker build -t gym-frontend .
+      args:
+        chdir: /home/ubuntu/frontend
+
+    - name: stop existing frontend container
+      command: docker rm -f gym-frontend
+      ignore_errors: yes
+
+    - name: Run frontend container
+      command: docker run -d -p 80:80 --name gym-frontend gym-frontend
+

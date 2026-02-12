@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #111;
+  color: white;
+}
+
+.hero {
+  height: 100vh;
+  background: url('https://images.unsplash.com/photo-1558611848-73f7eb4001a1') no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.7);
+  padding: 40px;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 25px;
+  background: #ff4c29;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.about {
+  padding: 60px 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container img {
+  width: 400px;
+  border-radius: 10px;
+}
+
+.pricing {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.card {
+  background: #222;
+  padding: 30px;
+  border-radius: 10px;
+  width: 200px;
+}
+
+.highlight {
+  background: #ff4c29;
+}
+
+.price {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.trainers {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.trainer-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.trainer img {
+  width: 200px;
+  border-radius: 10px;
+}
+
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #000;
+}
